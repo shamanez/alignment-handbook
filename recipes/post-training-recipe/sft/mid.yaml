@@ -1,8 +1,8 @@
 # Config for 8 nodes, with GBS 128
 # Model arguments
-model_name_or_path: HuggingFaceTB/SmolLM3-3B-Base
+model_name_or_path: gshasiri/llama3.2-1B-chatml
 model_revision: main
-torch_dtype: bfloat16
+dtype: bfloat16
 attn_implementation: flash_attention_2
 trust_remote_code: true
 
@@ -35,7 +35,7 @@ gradient_accumulation_steps: 2
 gradient_checkpointing: true
 gradient_checkpointing_kwargs:
   use_reentrant: true
-output_dir: data/SmolLM3-Mid
+output_dir: data/llama-mid
 hub_strategy: every_save
 learning_rate: 2.0e-05
 log_level: info
@@ -55,10 +55,11 @@ push_to_hub: true
 report_to:
 - wandb
 save_strategy: steps
-save_steps: 0.05 # save every 0.25 epochs
+save_steps: 0.02 # save every 0.25 epochs
 save_total_limit: 1
 seed: 42
 use_liger_kernel: true
 warmup_ratio: 0.03
-run_name: smollm3-midtraining
+run_name: llama-mid
 average_tokens_across_devices: true
+resume_from_checkpoint: true

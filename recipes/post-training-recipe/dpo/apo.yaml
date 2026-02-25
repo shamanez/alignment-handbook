@@ -1,8 +1,7 @@
-# Config for 2 node, with GBS 32
 # Model arguments
-model_name_or_path: HuggingFaceTB/SmolLM3-3B-checkpoints
-model_revision: it-SFT
-torch_dtype: bfloat16
+model_name_or_path: gshasiri/SmolLM3-SFT
+model_revision: main
+dtype: bfloat16
 attn_implementation: flash_attention_2
 trust_remote_code: true
 
@@ -36,8 +35,8 @@ gradient_accumulation_steps: 2
 gradient_checkpointing: true
 gradient_checkpointing_kwargs:
   use_reentrant: true
-output_dir: data/SmolLM3-DPO
-run_name: SmolLM3-DPO
+output_dir: data/llama-DPO
+run_name: llama-DPO
 
 hub_strategy: every_save
 learning_rate: 1.0e-06

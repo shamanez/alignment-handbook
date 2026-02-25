@@ -45,7 +45,7 @@ from transformers import set_seed
 from transformers.trainer_utils import get_last_checkpoint
 
 from alignment import ScriptArguments, SFTConfig, get_dataset, get_model, get_tokenizer
-from trl import ModelConfig, SFTTrainer, TrlParser, get_peft_config, setup_chat_format
+from trl import ModelConfig, SFTTrainer, TrlParser, get_peft_config
 
 
 logger = logging.getLogger(__name__)
@@ -97,7 +97,6 @@ def main(script_args, training_args, model_args):
 
     if tokenizer.chat_template is None:
         logger.info("No chat template provided, using ChatML.")
-        model, tokenizer = setup_chat_format(model, tokenizer, format="chatml")
 
     ############################
     # Initialize the SFT Trainer

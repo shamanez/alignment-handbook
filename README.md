@@ -1,38 +1,3 @@
-<p align="center">
-  <img src="https://raw.githubusercontent.com/huggingface/alignment-handbook/main/assets/handbook.png">
-</p>
-
-<p align="center">
-    🤗 <a href="https://huggingface.co/collections/alignment-handbook/handbook-v01-models-and-datasets-654e424d22e6880da5ebc015" target="_blank">Models & Datasets</a> | 📃 <a href="https://arxiv.org/abs/2310.16944" target="_blank">Technical Report</a>
-</p>
-
-# The Alignment Handbook
-
-Robust recipes to continue pretraining and to align language models with human and AI preferences.
-
-## What is this?
-
-Just one year ago, chatbots were out of fashion and most people hadn't heard about techniques like Reinforcement Learning from Human Feedback (RLHF) to align language models with human preferences. Then, OpenAI broke the internet with ChatGPT and Meta followed suit by releasing the Llama series of language models which enabled the ML community to build their very own capable chatbots. This has led to a rich ecosystem of datasets and models that have mostly focused on teaching language models to follow instructions through supervised fine-tuning (SFT).
-
-However, we know from the [InstructGPT](https://huggingface.co/papers/2203.02155) and [Llama2](https://huggingface.co/papers/2307.09288) papers that significant gains in helpfulness and safety can be had by augmenting SFT with human (or AI) preferences. At the same time, aligning language models to a set of preferences is a fairly novel idea and there are few public resources available on how to train these models, what data to collect, and what metrics to measure for best downstream performance.
-
-The Alignment Handbook aims to fill that gap by providing the community with a series of robust training recipes that span the whole pipeline.
-
-## News 🗞️
-* **July 24, 2025**: We release the full [post-training recipe](recipes/smollm3/README.md) behind SmolLM3-3B: a state-of-the-art hybrid reasoning model 💭
-* **November 21, 2024**: We release the [recipe](recipes/smollm2/README.md) for fine-tuning SmolLM2-Instruct.
-* **August 18, 2024**: We release SmolLM-Instruct v0.2, along with the [recipe](recipes/smollm/README.md)  to fine-tuning small LLMs 💻
-* **April 12, 2024**: We release Zephyr 141B (A35B), in collaboration with Argilla and Kaist AI, along with the recipe to fine-tune Mixtral 8x22B with ORPO 🪁
-* **March 12, 2024:** We release StarChat2 15B, along with the recipe to train capable coding assistants 🌟
-* **March 1, 2024:** We release Zephyr 7B Gemma, which is a new recipe to align Gemma 7B with RLAIF 🔥
-* **February 1, 2024:** We release a recipe to align open LLMs with Constitutional AI 📜! See the [recipe](https://github.com/huggingface/alignment-handbook/tree/main/recipes/constitutional-ai) and the [blog post](https://huggingface.co/blog/constitutional_ai) for details. 
-* **January 18, 2024:** We release a suite of evaluations of DPO vs KTO vs IPO, see the [recipe](recipes/pref_align_scan/README.md) and the [blog post](https://huggingface.co/blog/pref-tuning) for details.
-* **November 10, 2023:** We release all the training code to replicate Zephyr-7b-β 🪁! We also release [No Robots](https://huggingface.co/datasets/HuggingFaceH4/no_robots), a brand new dataset of 10,000 instructions and demonstrations written entirely by skilled human annotators.
-
-## Links 🔗
-
-* [Zephyr 7B models, datasets, and demos](https://huggingface.co/collections/HuggingFaceH4/zephyr-7b-6538c6d6d5ddd1cbb1744a66)
-
 ## How to navigate this project 🧭
 
 This project is simple by design and mostly consists of:
